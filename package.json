@@ -3,13 +3,18 @@
 	"version": "1.0.0",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
-	],
+	"exports": {
+		".": {
+			"require": "./dist/cjs/index.js",
+			"import": "./dist/esm/index.js"
+		}
+	},
 	"scripts": {
-		"build": "tsc",
+		"build": "npm run build:cjs && npm run build:esm",
 		"prepublishOnly": "bun build",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build:cjs": "tsc -p tsconfig.cjs.json",
+		"build:esm": "tsc -p tsconfig.esm.json"
 	},
 	"keywords": [],
 	"author": "",
@@ -20,6 +25,6 @@
 		"typescript": "^5.8.2"
 	},
 	"peerDependencies": {
-		"typescript": "^5.0.0"
+		"typescript": "^5.8.2"
 	}
 }
