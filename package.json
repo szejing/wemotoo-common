@@ -1,18 +1,24 @@
 {
-	"name": "wemotoo-common",
-	"version": "1.0.0",
-	"main": "index.js",
-	"scripts": {
-		"build": "tsc",
-		"prepublishOnly": "bun build",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"description": "",
-	"dependencies": {
-		"@types/node": "^22.13.10",
-		"typescript": "^5.8.2"
-	}
+  "name": "wemotoo-common",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "bun build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
