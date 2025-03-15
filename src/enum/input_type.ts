@@ -1,0 +1,8 @@
+export enum InputType {
+  TEXT,
+  NUMBER,
+  BOOLEAN,
+  TEXTAREA,
+  MASKEDTEXTBOX,
+  GETFILENAME,
+}
