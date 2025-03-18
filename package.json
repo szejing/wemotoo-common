@@ -1,20 +1,20 @@
 {
 	"name": "wemotoo-common",
 	"version": "1.0.0",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./dist/cjs/index.cjs.js",
+	"module": "./dist/esm/index.esm.js",
 	"exports": {
 		".": {
-			"require": "./dist/cjs/index.js",
-			"import": "./dist/esm/index.js"
+			"import": "./dist/esm/index.esm.js",
+			"require": "./dist/cjs/index.cjs.js"
 		}
 	},
 	"scripts": {
-		"build": "npm run build:cjs && npm run build:esm",
-		"prepublishOnly": "bun build",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build:cjs": "tsc -p tsconfig.cjs.json",
-		"build:esm": "tsc -p tsconfig.esm.json"
+		"build": "npm run build:esm && npm run build:cjs",
+		"remove": "rm -rf dist && rm -rf node_modules",
+		"rebuild": "npm run remove && npm run build",
+		"build:esm": "tsc -p tsconfig.esm.json",
+		"build:cjs": "tsc -p tsconfig.cjs.json"
 	},
 	"keywords": [],
 	"author": "",
