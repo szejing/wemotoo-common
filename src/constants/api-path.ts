@@ -1,0 +1,16 @@
+export const API_PATH = {
+	MERCHANT: 'merchant',
+	AUTH: 'auth',
+	IMAGE: 'image',
+	CATEGORIES: 'categories',
+	TAGS: 'tags',
+	PROD: 'products',
+	PROD_OPTIONS: 'product-options',
+	PROD_VARIANTS: 'product-variants',
+	PROD_TYPES: 'product-types',
+	CURRENCIES: 'currencies',
+	COUNTRIES: 'countries',
+	MAINTENANCES: 'maintenances',
+	SETTINGS: 'settings',
+	CRM_USERS: 'crm-users',
+};
