@@ -1,10 +1,9 @@
 export const SEGMENT_CODE = {
-  INFO: 'Info',
-  GENERAL: 'General',
-  SALES_ORDER: 'SalesOrder',
-  CART: 'Cart',
-  ORDER: 'Order',
-  REPORT: 'Report',
-  PRODUCT: 'Product',
-  MAINTENANCE: 'Maintenance',
+	INFO: 'Info',
+	GENERAL: 'General',
+	SALES_ORDER: 'SalesOrder',
+	CART: 'Cart',
+	ORDER: 'Order',
+	REPORT: 'Report',
+	PRODUCT: 'Product',
 };
