@@ -10,7 +10,6 @@ export const API_PATH = {
 	PROD_TYPES: 'product-types',
 	CURRENCIES: 'currencies',
 	COUNTRIES: 'countries',
-	MAINTENANCES: 'maintenances',
 	SETTINGS: 'settings',
 	CRM_USERS: 'crm-users',
 };
