@@ -5,5 +5,9 @@
  * @returns New list with the replaced item
  */
 export function replaceItem<T extends { id: string | number }>(currentList: T[], item: T): T[] {
+	if (currentList.length === 0) {
+		return [item];
+	}
+
 	return currentList.map((currentItem) => (currentItem.id === item.id ? item : currentItem));
 }
