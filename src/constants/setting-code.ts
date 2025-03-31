@@ -24,18 +24,11 @@ export const GENERAL_SETTING_CODE = {
 	MAX_PRODUCTS: 'MaxProducts',
 };
 
-export const CART_SETTING_CODE = {
-	PREFIX_CART_NO: 'PrefixCartNo',
-	MIN_CART_NO_LENGTH: 'MinCartNoLength',
-	INITIAL_CART_NO: 'InitialCartNo',
-};
-
 export const ORDER_SETTING_CODE = {
 	PREFIX_ORDER_NO: 'PrefixOrderNo',
-};
-
-export const REPORT_SETTING_CODE = {
-	REPORT_STATUS: 'ReportStatus',
+	LAST_ORDER_NO: 'LastOrderNo',
+	MIN_ORDER_NO_LENGTH: 'MinOrderNoLength',
+	INITIAL_ORDER_NO: 'InitialOrderNo',
 };
 
 export const PRODUCT_SETTING_CODE = {
