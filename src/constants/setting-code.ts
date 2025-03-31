@@ -1,4 +1,4 @@
-export const MERCHANT_SETTING_CODE = {
+export const MERCHANT = {
 	ID: 'MerchantId',
 	NAME: 'MerchantName',
 	THUMBNAIL: 'MerchantThumbnail',
@@ -20,17 +20,17 @@ export const MERCHANT_SETTING_CODE = {
 	ADDRESS_POSTAL_CODE: 'MerchantAddressPostalCode',
 };
 
-export const GENERAL_SETTING_CODE = {
+export const GENERAL = {
 	MAX_PRODUCTS: 'MaxProducts',
 };
 
-export const ORDER_SETTING_CODE = {
+export const ORDER = {
 	PREFIX_ORDER_NO: 'PrefixOrderNo',
 	LAST_ORDER_NO: 'LastOrderNo',
 	MIN_ORDER_NO_LENGTH: 'MinOrderNoLength',
 	INITIAL_ORDER_NO: 'InitialOrderNo',
 };
 
-export const PRODUCT_SETTING_CODE = {
+export const PRODUCT = {
 	HIDE_LONG_DESC: 'HideLongDesc',
 };
