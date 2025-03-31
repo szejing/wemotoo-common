@@ -4,8 +4,8 @@ export const GROUP_CODE = {
 	ADDRESS: 'Address',
 	CONTACT: 'Contact',
 	CONTROL: 'Control',
-	CART_SETTING: 'CartSetting',
-	ORDER_SETTING: 'OrderSetting',
-	REPORT_SETTING: 'ReportSetting',
-	PRODUCT_SETTING: 'ProductSetting',
+	CART: 'Cart',
+	ORDER: 'Order',
+	REPORT: 'Report',
+	PRODUCT: 'Product',
 };
