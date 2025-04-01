@@ -26,3 +26,4 @@ export * from './tax-type';
 export * from './user-role';
 export * from './product-type';
 export * from './filter-type';
+export * from './order-item-status';
