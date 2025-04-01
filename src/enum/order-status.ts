@@ -3,4 +3,5 @@ export enum OrderStatus {
 	COMPLETED = 'completed',
 	CANCELLED = 'cancelled',
 	REQUIRES_ACTION = 'requires_action',
+	REFUNDED = 'refunded',
 }
