@@ -5,3 +5,5 @@ export enum OrderStatus {
 	REQUIRES_ACTION = 'requires_action',
 	REFUNDED = 'refunded',
 }
+
+// pending_payment | completed | cancelled | requires_action | refunded
