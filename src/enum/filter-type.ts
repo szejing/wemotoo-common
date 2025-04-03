@@ -1,13 +1,15 @@
 export enum FilterType {
-	EQUAL = 'equal',
-	NOT_EQUAL = 'not_equal',
+	EQUAL = '=',
+	NOT_EQUAL = '!=',
 	IN = 'in',
 	NOT_IN = 'not_in',
 	LIKE = 'like',
 	NOT_LIKE = 'not_like',
-	GREATER_THAN = 'greater_than',
-	LESS_THAN = 'less_than',
-	GREATER_THAN_OR_EQUAL = 'greater_than_or_equal',
-	LESS_THAN_OR_EQUAL = 'less_than_or_equal',
+	GREATER_THAN = '>',
+	LESS_THAN = '<',
+	GREATER_THAN_OR_EQUAL = '>=',
+	LESS_THAN_OR_EQUAL = '<=',
 	BETWEEN = 'between',
 }
+
+// =, !=, in, not_in, like, not_like, >, <, >=, <=, between
