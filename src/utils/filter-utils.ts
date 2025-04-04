@@ -1,4 +1,3 @@
-import { MoreThan, LessThan, Equal, Between, MoreThanOrEqual, LessThanOrEqual, Not, In, Like } from 'typeorm';
 import { FilterType } from './../enum/filter-type';
 
 type DateFilterData = {
@@ -17,6 +16,17 @@ type StringFilterData = {
 function isDateFilterData(data: DateFilterData | StringFilterData): data is DateFilterData {
 	return 'start_date' in data || 'end_date' in data || 'dates' in data;
 }
+
+// Custom filter operators that return plain objects compatible with TypeORM
+const MoreThan = (value: any) => ({ $gt: value });
+const LessThan = (value: any) => ({ $lt: value });
+const Equal = (value: any) => ({ $eq: value });
+const Not = (value: any) => ({ $not: value });
+const Between = (value1: any, value2: any) => ({ $between: [value1, value2] });
+const MoreThanOrEqual = (value: any) => ({ $gte: value });
+const LessThanOrEqual = (value: any) => ({ $lte: value });
+const In = (values: any[]) => ({ $in: values });
+const Like = (pattern: string | undefined) => (pattern ? { $like: pattern } : undefined);
 
 export function generateWhereCondition(field: string, data: DateFilterData | StringFilterData): any {
 	let param1: any;
@@ -80,16 +90,14 @@ export function generateWhereCondition(field: string, data: DateFilterData | Str
 			if (!isDateFilterData(data) && !data.pattern) {
 				throw new Error('Pattern is required for LIKE operation');
 			}
-			return {
-				[field]: Like(isDateFilterData(data) ? undefined : data.pattern),
-			};
+			const likeCondition = Like(isDateFilterData(data) ? undefined : data.pattern);
+			return likeCondition ? { [field]: likeCondition } : {};
 		case FilterType.NOT_LIKE:
 			if (!isDateFilterData(data) && !data.pattern) {
 				throw new Error('Pattern is required for NOT_LIKE operation');
 			}
-			return {
-				[field]: Not(Like(isDateFilterData(data) ? undefined : data.pattern)),
-			};
+			const notLikeCondition = Like(isDateFilterData(data) ? undefined : data.pattern);
+			return notLikeCondition ? { [field]: Not(notLikeCondition) } : {};
 		default:
 			throw new Error(`Unsupported filter type: ${filter_type}`);
 	}
