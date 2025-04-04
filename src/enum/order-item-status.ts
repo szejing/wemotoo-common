@@ -3,3 +3,5 @@ export enum OrderItemStatus {
 	VOIDED = 'voided',
 	REFUNDED = 'refunded',
 }
+
+// active | voided | refunded

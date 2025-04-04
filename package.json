@@ -28,7 +28,6 @@
 		"typescript": "^5.8.2"
 	},
 	"dependencies": {
-		"@types/node": "^22.14.0",
-		"typeorm": "^0.3.21"
+		"@types/node": "^22.14.0"
 	}
 }

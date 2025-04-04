@@ -12,4 +12,8 @@ export const API_PATH = {
 	COUNTRIES: 'countries',
 	SETTINGS: 'settings',
 	CRM_USERS: 'crm-users',
+	ORDERS: 'orders',
+	SALES: 'sales',
+	SUMM_ORDERS: 'summ-orders',
+	SUMM_SALES: 'summ-sales',
 };
