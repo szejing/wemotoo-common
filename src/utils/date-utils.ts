@@ -1,3 +1,5 @@
+import { formatDate, parse } from 'date-fns';
+
 export const isPast = (date: Date) => {
 	const now = new Date();
 	return date instanceof Date && now > date;
@@ -10,7 +12,7 @@ export const isFuture = (date: Date) => {
 
 export const isSameDate = (date1: Date, date2: Date) => {
 	try {
-		return date1 instanceof Date && date2 instanceof Date && extractDate(date1) === extractDate(date2);
+		return date1 instanceof Date && date2 instanceof Date && getFormattedDate(date1) === getFormattedDate(date2);
 	} catch (e) {
 		throw e;
 	}
@@ -20,11 +22,12 @@ export const getTimeStamp = () => {
 	return Date.now();
 };
 
-export const extractDate = (date: Date): string => {
-	const year = date.getFullYear();
-	const month = String(date.getMonth() + 1).padStart(2, '0');
-	const day = String(date.getDate()).padStart(2, '0');
-	return `${year}-${month}-${day}`;
+export const getFormattedDate = (date: Date, format: string = 'dd/MM/yyyy'): string => {
+	return formatDate(date, format);
+};
+
+export const parseDate = (date: string, format: string = 'dd/MM/yyyy'): Date => {
+	return parse(date, format, new Date());
 };
 
 export const calculateDaysBetweenDates = (start_date: Date, end_date: Date): number => {
@@ -49,5 +52,5 @@ export const getDateRange = (start_date: Date, end_date: Date): string[] => {
 		date_range.push(currentDate);
 	}
 
-	return date_range.map((date) => extractDate(date));
+	return date_range.map((date) => getFormattedDate(date));
 };
