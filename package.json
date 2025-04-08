@@ -28,6 +28,7 @@
 		"typescript": "^5.8.2"
 	},
 	"dependencies": {
-		"@types/node": "^22.14.0"
+		"@types/node": "^22.14.0",
+		"date-fns": "^4.1.0"
 	}
 }
