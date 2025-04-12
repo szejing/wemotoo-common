@@ -56,3 +56,12 @@ export function extractBeforeSeparator(str: string, separator: string): string {
 	const parts = str.split(separator);
 	return parts.length > 0 ? parts[0] : str;
 }
+
+/**
+ * Removes the merchant ID from a string
+ * @param str The string to remove the merchant ID from
+ * @returns The string without the merchant ID
+ */
+export function removeMerchantId(str: string): string {
+	return str.replace(/^M\d{5}\//, '');
+}
