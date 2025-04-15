@@ -1,9 +1,9 @@
 export enum OrderStatus {
+	NEW = 'new',
 	PENDING_PAYMENT = 'pending_payment',
-	COMPLETED = 'completed',
 	CANCELLED = 'cancelled',
 	REQUIRES_ACTION = 'requires_action',
 	REFUNDED = 'refunded',
 }
 
-// pending_payment | completed | cancelled | requires_action | refunded
+// pending_payment | completed | new | cancelled | requires_action | refunded
