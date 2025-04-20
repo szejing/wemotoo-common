@@ -8,6 +8,7 @@ export const MERCHANT = {
 	COMPANY_NAME: 'MerchantCompanyName',
 	COMPANY_SSM: 'MerchantCompanySsm',
 	COMPANY_EMAIL_ADDRESS: 'MerchantCompanyEmailAddress',
+	COMPANY_WEBSITE: 'MerchantCompanyWebsite',
 	CONTACT_PERSON: 'MerchantContactPerson',
 	CONTACT_NO: 'MerchantContactNo',
 	JOINED_DATE: 'MerchantJoinedDate',
