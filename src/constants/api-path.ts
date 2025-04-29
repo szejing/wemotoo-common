@@ -16,4 +16,7 @@ export const API_PATH = {
 	SALES: 'sales',
 	SUMM_ORDERS: 'summ-orders',
 	SUMM_SALES: 'summ-sales',
+	PAYMENT_TYPES: 'payment-types',
+	PAYMENT_TYPE_GROUPS: 'payment-type-groups',
+	PAYMENT_METHODS: 'payment-methods',
 };
