@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.paymentMethodType = exports.PaymentMethodType = void 0;
+exports.getPaymentMethodType = exports.PaymentMethodType = void 0;
 var PaymentMethodType;
 (function (PaymentMethodType) {
     PaymentMethodType[PaymentMethodType["ALL"] = 0] = "ALL";
@@ -12,7 +12,7 @@ var PaymentMethodType;
     PaymentMethodType[PaymentMethodType["CASH"] = 6] = "CASH";
 })(PaymentMethodType || (exports.PaymentMethodType = PaymentMethodType = {}));
 // parameter int convert to string
-const paymentMethodType = (type) => {
+const getPaymentMethodType = (type) => {
     switch (type) {
         case PaymentMethodType.ALL:
             return 'All';
@@ -32,4 +32,4 @@ const paymentMethodType = (type) => {
             return 'Unknown';
     }
 };
-exports.paymentMethodType = paymentMethodType;
+exports.getPaymentMethodType = getPaymentMethodType;

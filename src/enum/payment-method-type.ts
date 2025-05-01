@@ -1,4 +1,4 @@
-export enum PaymentMethodType {
+enum PaymentMethodType {
 	ALL,
 	CREDIT_CARD,
 	DEBIT_CARD,
@@ -9,7 +9,7 @@ export enum PaymentMethodType {
 }
 
 // parameter int convert to string
-export const paymentMethodType = (type: number) => {
+const getPaymentMethodType = (type: number) => {
 	switch (type) {
 		case PaymentMethodType.ALL:
 			return 'All';
@@ -29,3 +29,5 @@ export const paymentMethodType = (type: number) => {
 			return 'Unknown';
 	}
 };
+
+export { PaymentMethodType, getPaymentMethodType };

@@ -1,4 +1,4 @@
-export var PaymentMethodType;
+var PaymentMethodType;
 (function (PaymentMethodType) {
     PaymentMethodType[PaymentMethodType["ALL"] = 0] = "ALL";
     PaymentMethodType[PaymentMethodType["CREDIT_CARD"] = 1] = "CREDIT_CARD";
@@ -9,7 +9,7 @@ export var PaymentMethodType;
     PaymentMethodType[PaymentMethodType["CASH"] = 6] = "CASH";
 })(PaymentMethodType || (PaymentMethodType = {}));
 // parameter int convert to string
-export const paymentMethodType = (type) => {
+const getPaymentMethodType = (type) => {
     switch (type) {
         case PaymentMethodType.ALL:
             return 'All';
@@ -29,3 +29,4 @@ export const paymentMethodType = (type) => {
             return 'Unknown';
     }
 };
+export { PaymentMethodType, getPaymentMethodType };
