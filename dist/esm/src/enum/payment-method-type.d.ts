@@ -7,3 +7,4 @@ export declare enum PaymentMethodType {
     BANK_TRANSFER = 5,
     CASH = 6
 }
+export declare const paymentMethodType: (type: number) => "All" | "Credit Card" | "Debit Card" | "QR Code" | "E-Wallet" | "Bank Transfer" | "Cash" | "Unknown";

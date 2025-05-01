@@ -10,7 +10,6 @@
 		}
 	},
 	"scripts": {
-		"postinstall": "npm run build",
 		"build": "npm run build:esm && npm run build:cjs",
 		"remove": "rm -rf dist && rm -rf node_modules",
 		"rebuild": "npm run remove && npm run build",

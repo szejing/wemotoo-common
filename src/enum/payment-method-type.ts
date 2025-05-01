@@ -7,3 +7,25 @@ export enum PaymentMethodType {
 	BANK_TRANSFER,
 	CASH,
 }
+
+// parameter int convert to string
+export const paymentMethodType = (type: number) => {
+	switch (type) {
+		case PaymentMethodType.ALL:
+			return 'All';
+		case PaymentMethodType.CREDIT_CARD:
+			return 'Credit Card';
+		case PaymentMethodType.DEBIT_CARD:
+			return 'Debit Card';
+		case PaymentMethodType.QR_CODE:
+			return 'QR Code';
+		case PaymentMethodType.E_WALLET:
+			return 'E-Wallet';
+		case PaymentMethodType.BANK_TRANSFER:
+			return 'Bank Transfer';
+		case PaymentMethodType.CASH:
+			return 'Cash';
+		default:
+			return 'Unknown';
+	}
+};
