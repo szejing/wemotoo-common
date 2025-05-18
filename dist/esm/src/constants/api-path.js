@@ -1,7 +1,7 @@
 export const API_PATH = {
     MERCHANT: 'merchant',
     AUTH: 'auth',
-    IMAGE: 'image',
+    IMAGES: 'images',
     PROD_CATEGORIES: 'product-categories',
     PROD_TAGS: 'product-tags',
     PROD: 'products',

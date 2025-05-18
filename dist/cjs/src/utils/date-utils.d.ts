@@ -1,9 +1,0 @@
-export declare const isPast: (date: Date) => boolean;
-export declare const isFuture: (date: Date) => boolean;
-export declare const isSameDate: (date1: Date, date2: Date) => boolean;
-export declare const getTimeStamp: () => number;
-export declare const getFormattedDate: (date: Date, format?: string) => string;
-export declare const parseDate: (date: string, format?: string) => Date;
-export declare const calculateDaysBetweenDates: (start_date: Date, end_date: Date) => number;
-export declare const getDateRange: (start_date: Date, end_date: Date) => string[];
-//# sourceMappingURL=date-utils.d.ts.map

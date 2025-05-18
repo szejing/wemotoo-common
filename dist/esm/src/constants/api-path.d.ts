@@ -1,7 +1,7 @@
 export declare const API_PATH: {
     MERCHANT: string;
     AUTH: string;
-    IMAGE: string;
+    IMAGES: string;
     PROD_CATEGORIES: string;
     PROD_TAGS: string;
     PROD: string;
