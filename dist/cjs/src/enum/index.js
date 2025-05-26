@@ -40,3 +40,4 @@ __exportStar(require("./product-type"), exports);
 __exportStar(require("./filter-type"), exports);
 __exportStar(require("./order-item-status"), exports);
 __exportStar(require("./payment-method-type"), exports);
+__exportStar(require("./appointment-status"), exports);
