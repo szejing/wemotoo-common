@@ -19,4 +19,5 @@ export const API_PATH = {
 	PAYMENT_TYPES: 'payment-types',
 	PAYMENT_TYPE_GROUPS: 'payment-type-groups',
 	PAYMENT_METHODS: 'payment-methods',
+	CUSTOMERS: 'customers',
 };
