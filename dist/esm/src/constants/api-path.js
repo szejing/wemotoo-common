@@ -8,6 +8,7 @@ export const API_PATH = {
     PROD_OPTIONS: 'product-options',
     PROD_VARIANTS: 'product-variants',
     PROD_TYPES: 'product-types',
+    PROD_BRANDS: 'product-brands',
     CURRENCIES: 'currencies',
     COUNTRIES: 'countries',
     SETTINGS: 'settings',
@@ -20,5 +21,4 @@ export const API_PATH = {
     PAYMENT_TYPE_GROUPS: 'payment-type-groups',
     PAYMENT_METHODS: 'payment-methods',
     CUSTOMERS: 'customers',
-    BRANDS: 'brands',
 };

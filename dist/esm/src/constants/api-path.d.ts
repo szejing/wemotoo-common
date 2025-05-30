@@ -8,6 +8,7 @@ export declare const API_PATH: {
     PROD_OPTIONS: string;
     PROD_VARIANTS: string;
     PROD_TYPES: string;
+    PROD_BRANDS: string;
     CURRENCIES: string;
     COUNTRIES: string;
     SETTINGS: string;
@@ -20,5 +21,4 @@ export declare const API_PATH: {
     PAYMENT_TYPE_GROUPS: string;
     PAYMENT_METHODS: string;
     CUSTOMERS: string;
-    BRANDS: string;
 };
