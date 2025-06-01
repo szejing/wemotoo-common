@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getDateRange = exports.calculateDaysBetweenDates = exports.parseDate = exports.getFormattedDate = exports.getTimeStamp = exports.isSameDate = exports.isFuture = exports.isPast = void 0;
+exports.convertDurationToNumber = exports.transformDateWithoutTimezone = exports.transformDate = exports.getDateRange = exports.calculateDaysBetweenDates = exports.parseDate = exports.getFormattedDate = exports.getTimeStamp = exports.isSameDate = exports.isFuture = exports.isPast = void 0;
 const date_fns_1 = require("date-fns");
 const isPast = (date) => {
     const now = new Date();
@@ -53,3 +53,34 @@ const getDateRange = (start_date, end_date) => {
     return date_range.map((date) => (0, exports.getFormattedDate)(date));
 };
 exports.getDateRange = getDateRange;
+const transformDate = (value) => {
+    return !isNaN(Date.parse(value.toString())) ? new Date(value) : new Date(Number(value) * 1000);
+};
+exports.transformDate = transformDate;
+const transformDateWithoutTimezone = (value) => {
+    let newDate = (0, exports.parseDate)(value.toString()) ?? new Date(Number(value) * 1000);
+    newDate.setHours(0, 0, 0, 0);
+    return newDate;
+};
+exports.transformDateWithoutTimezone = transformDateWithoutTimezone;
+const convertDurationToNumber = (duration) => {
+    if (!duration || typeof duration !== 'string') {
+        return 0;
+    }
+    // Remove any whitespace and convert to lowercase
+    const cleanDuration = duration.trim().toLowerCase();
+    // Initialize total minutes
+    let totalMinutes = 0;
+    // Extract hours if present
+    const hoursMatch = cleanDuration.match(/(\d+)h/);
+    if (hoursMatch) {
+        totalMinutes += parseInt(hoursMatch[1]) * 60;
+    }
+    // Extract minutes if present
+    const minutesMatch = cleanDuration.match(/(\d+)m/);
+    if (minutesMatch) {
+        totalMinutes += parseInt(minutesMatch[1]);
+    }
+    return totalMinutes;
+};
+exports.convertDurationToNumber = convertDurationToNumber;

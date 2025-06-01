@@ -42,3 +42,31 @@ export const getDateRange = (start_date, end_date) => {
     }
     return date_range.map((date) => getFormattedDate(date));
 };
+export const transformDate = (value) => {
+    return !isNaN(Date.parse(value.toString())) ? new Date(value) : new Date(Number(value) * 1000);
+};
+export const transformDateWithoutTimezone = (value) => {
+    let newDate = parseDate(value.toString()) ?? new Date(Number(value) * 1000);
+    newDate.setHours(0, 0, 0, 0);
+    return newDate;
+};
+export const convertDurationToNumber = (duration) => {
+    if (!duration || typeof duration !== 'string') {
+        return 0;
+    }
+    // Remove any whitespace and convert to lowercase
+    const cleanDuration = duration.trim().toLowerCase();
+    // Initialize total minutes
+    let totalMinutes = 0;
+    // Extract hours if present
+    const hoursMatch = cleanDuration.match(/(\d+)h/);
+    if (hoursMatch) {
+        totalMinutes += parseInt(hoursMatch[1]) * 60;
+    }
+    // Extract minutes if present
+    const minutesMatch = cleanDuration.match(/(\d+)m/);
+    if (minutesMatch) {
+        totalMinutes += parseInt(minutesMatch[1]);
+    }
+    return totalMinutes;
+};

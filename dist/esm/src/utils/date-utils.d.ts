@@ -6,3 +6,6 @@ export declare const getFormattedDate: (date: Date, format?: string) => string;
 export declare const parseDate: (date: string, format?: string) => Date;
 export declare const calculateDaysBetweenDates: (start_date: Date, end_date: Date) => number;
 export declare const getDateRange: (start_date: Date, end_date: Date) => string[];
+export declare const transformDate: (value: string | number) => Date;
+export declare const transformDateWithoutTimezone: (value: string | number) => Date;
+export declare const convertDurationToNumber: (duration: string) => number;
