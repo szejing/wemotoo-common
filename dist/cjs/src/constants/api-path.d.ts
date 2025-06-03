@@ -21,5 +21,6 @@ export declare const API_PATH: {
     PAYMENT_TYPE_GROUPS: string;
     PAYMENT_METHODS: string;
     CUSTOMERS: string;
+    APPOINTMENTS: string;
 };
 //# sourceMappingURL=api-path.d.ts.map
