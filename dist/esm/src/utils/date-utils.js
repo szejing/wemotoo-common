@@ -7,6 +7,10 @@ export const isFuture = (date) => {
     const now = new Date();
     return date instanceof Date && date > now;
 };
+export const isToday = (date) => {
+    const now = new Date();
+    return date instanceof Date && date.toDateString() === now.toDateString();
+};
 export const isSameDate = (date1, date2) => {
     try {
         return date1 instanceof Date && date2 instanceof Date && getFormattedDate(date1) === getFormattedDate(date2);

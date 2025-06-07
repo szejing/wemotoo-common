@@ -1,16 +1,21 @@
 import { formatDate, parse } from 'date-fns';
 
-export const isPast = (date: Date) => {
+export const isPast = (date: Date): boolean => {
 	const now = new Date();
 	return date instanceof Date && now > date;
 };
 
-export const isFuture = (date: Date) => {
+export const isFuture = (date: Date): boolean => {
 	const now = new Date();
 	return date instanceof Date && date > now;
 };
 
-export const isSameDate = (date1: Date, date2: Date) => {
+export const isToday = (date: Date): boolean => {
+	const now = new Date();
+	return date instanceof Date && date.toDateString() === now.toDateString();
+};
+
+export const isSameDate = (date1: Date, date2: Date): boolean => {
 	try {
 		return date1 instanceof Date && date2 instanceof Date && getFormattedDate(date1) === getFormattedDate(date2);
 	} catch (e) {

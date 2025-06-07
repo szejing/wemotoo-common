@@ -1,5 +1,6 @@
 export declare const isPast: (date: Date) => boolean;
 export declare const isFuture: (date: Date) => boolean;
+export declare const isToday: (date: Date) => boolean;
 export declare const isSameDate: (date1: Date, date2: Date) => boolean;
 export declare const getTimeStamp: () => number;
 export declare const getFormattedDate: (date: Date, format?: string) => string;

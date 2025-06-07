@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.convertDurationToNumber = exports.transformDateWithoutTimezone = exports.transformDate = exports.getDateRange = exports.calculateDaysBetweenDates = exports.parseDate = exports.getFormattedDate = exports.getTimeStamp = exports.isSameDate = exports.isFuture = exports.isPast = void 0;
+exports.convertDurationToNumber = exports.transformDateWithoutTimezone = exports.transformDate = exports.getDateRange = exports.calculateDaysBetweenDates = exports.parseDate = exports.getFormattedDate = exports.getTimeStamp = exports.isSameDate = exports.isToday = exports.isFuture = exports.isPast = void 0;
 const date_fns_1 = require("date-fns");
 const isPast = (date) => {
     const now = new Date();
@@ -12,6 +12,11 @@ const isFuture = (date) => {
     return date instanceof Date && date > now;
 };
 exports.isFuture = isFuture;
+const isToday = (date) => {
+    const now = new Date();
+    return date instanceof Date && date.toDateString() === now.toDateString();
+};
+exports.isToday = isToday;
 const isSameDate = (date1, date2) => {
     try {
         return date1 instanceof Date && date2 instanceof Date && (0, exports.getFormattedDate)(date1) === (0, exports.getFormattedDate)(date2);
