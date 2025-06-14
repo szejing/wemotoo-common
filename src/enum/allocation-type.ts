@@ -1,4 +1,4 @@
 export enum AllocationType {
-  TOTAL = 'total',
-  ITEM = 'item',
+	BILL = 'bill',
+	ITEM = 'item',
 }

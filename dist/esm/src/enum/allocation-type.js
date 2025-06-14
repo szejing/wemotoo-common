@@ -1,5 +1,5 @@
 export var AllocationType;
 (function (AllocationType) {
-    AllocationType["TOTAL"] = "total";
+    AllocationType["BILL"] = "bill";
     AllocationType["ITEM"] = "item";
 })(AllocationType || (AllocationType = {}));

@@ -1,5 +1,5 @@
 export declare enum AllocationType {
-    TOTAL = "total",
+    BILL = "bill",
     ITEM = "item"
 }
 //# sourceMappingURL=allocation-type.d.ts.map
