@@ -13,8 +13,9 @@ export declare const MERCHANT: {
     CONTACT_NO: string;
     JOINED_DATE: string;
     EXPIRED_DATE: string;
-    ADDRESS_1: string;
-    ADDRESS_2: string;
+    ADDRESS1: string;
+    ADDRESS2: string;
+    ADDRESS3: string;
     ADDRESS_CITY: string;
     ADDRESS_COUNTRY: string;
     ADDRESS_STATE: string;

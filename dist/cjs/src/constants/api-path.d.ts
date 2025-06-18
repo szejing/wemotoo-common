@@ -22,5 +22,9 @@ export declare const API_PATH: {
     PAYMENT_METHODS: string;
     CUSTOMERS: string;
     APPOINTMENTS: string;
+    OUTLETS: string;
+    TAXES: string;
+    TAX_GROUPS: string;
+    TAX_RULES: string;
 };
 //# sourceMappingURL=api-path.d.ts.map

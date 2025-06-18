@@ -25,4 +25,8 @@ exports.API_PATH = {
     PAYMENT_METHODS: 'payment-methods',
     CUSTOMERS: 'customers',
     APPOINTMENTS: 'appointments',
+    OUTLETS: 'outlets',
+    TAXES: 'taxes',
+    TAX_GROUPS: 'tax-groups',
+    TAX_RULES: 'tax-rules',
 };
