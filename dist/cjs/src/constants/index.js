@@ -21,3 +21,4 @@ __exportStar(require("./segment-code"), exports);
 __exportStar(require("./setting-code"), exports);
 __exportStar(require("./api-path"), exports);
 __exportStar(require("./callback-provider"), exports);
+__exportStar(require("./default-relations"), exports);

@@ -1,0 +1,14 @@
+export declare const imageRelations: string[];
+export declare const defaultProductCategoryRelations: string[];
+export declare const defaultSimpleProductRelations: string[];
+export declare const defaultProductRelations: string[];
+export declare const defaultGetProductVariantRelations: string[];
+export declare const defaultProductOptionRelations: string[];
+export declare const defaultOrderRelations: string[];
+export declare const defaultSaleRelations: string[];
+export declare const defaultCartRelations: string[];
+export declare const defaultPaymentMethodRelations: string[];
+export declare const defaultPaymentTypeGroupRelations: string[];
+export declare const defaultProductBrandRelations: string[];
+export declare const defaultTaxGroupRelations: string[];
+export declare const defaultTaxRulesRelations: string[];
