@@ -6,5 +6,6 @@ export declare const SEGMENT_CODE: {
     ORDER: string;
     REPORT: string;
     PRODUCT: string;
+    EXTERNAL: string;
 };
 //# sourceMappingURL=segment-code.d.ts.map

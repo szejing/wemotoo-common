@@ -6,4 +6,5 @@ export const SEGMENT_CODE = {
     ORDER: 'Order',
     REPORT: 'Report',
     PRODUCT: 'Product',
+    EXTERNAL: 'External',
 };
