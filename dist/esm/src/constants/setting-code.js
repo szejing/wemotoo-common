@@ -33,3 +33,8 @@ export const ORDER = {
 export const PRODUCT = {
     HIDE_LONG_DESC: 'HideLongDesc',
 };
+export const FIUU = {
+    MERCHANT_ID: 'FiuuMerchantId',
+    V_KEY: 'FiuuVKey',
+    S_KEY: 'FiuuSKey',
+};

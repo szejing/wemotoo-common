@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PRODUCT = exports.ORDER = exports.GENERAL = exports.MERCHANT = void 0;
+exports.FIUU = exports.PRODUCT = exports.ORDER = exports.GENERAL = exports.MERCHANT = void 0;
 exports.MERCHANT = {
     ID: 'MerchantId',
     NAME: 'MerchantName',
@@ -35,4 +35,9 @@ exports.ORDER = {
 };
 exports.PRODUCT = {
     HIDE_LONG_DESC: 'HideLongDesc',
+};
+exports.FIUU = {
+    MERCHANT_ID: 'FiuuMerchantId',
+    V_KEY: 'FiuuVKey',
+    S_KEY: 'FiuuSKey',
 };

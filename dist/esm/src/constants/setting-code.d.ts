@@ -33,3 +33,8 @@ export declare const ORDER: {
 export declare const PRODUCT: {
     HIDE_LONG_DESC: string;
 };
+export declare const FIUU: {
+    MERCHANT_ID: string;
+    V_KEY: string;
+    S_KEY: string;
+};

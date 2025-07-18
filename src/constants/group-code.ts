@@ -8,4 +8,5 @@ export const GROUP_CODE = {
 	ORDER: 'Order',
 	REPORT: 'Report',
 	PRODUCT: 'Product',
+	FIUU: 'Fiuu',
 };
