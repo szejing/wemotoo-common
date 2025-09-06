@@ -23,6 +23,8 @@ export declare const MERCHANT: {
 };
 export declare const GENERAL: {
     MAX_PRODUCTS: string;
+    MERCHANT_ID: string;
+    HOST_URL: string;
 };
 export declare const ORDER: {
     PREFIX_ORDER_NO: string;
@@ -34,7 +36,7 @@ export declare const PRODUCT: {
     HIDE_LONG_DESC: string;
 };
 export declare const FIUU: {
-    MERCHANT_ID: string;
     V_KEY: string;
     S_KEY: string;
+    USE_EXTENDED_FORMAT: string;
 };

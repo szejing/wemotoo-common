@@ -26,6 +26,8 @@ exports.MERCHANT = {
 };
 exports.GENERAL = {
     MAX_PRODUCTS: 'MaxProducts',
+    MERCHANT_ID: 'MerchantId',
+    HOST_URL: 'HostUrl',
 };
 exports.ORDER = {
     PREFIX_ORDER_NO: 'PrefixOrderNo',
@@ -37,7 +39,7 @@ exports.PRODUCT = {
     HIDE_LONG_DESC: 'HideLongDesc',
 };
 exports.FIUU = {
-    MERCHANT_ID: 'FiuuMerchantId',
     V_KEY: 'FiuuVKey',
     S_KEY: 'FiuuSKey',
+    USE_EXTENDED_FORMAT: 'FiuuUExtFormat',
 };

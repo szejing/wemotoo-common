@@ -23,6 +23,8 @@ export const MERCHANT = {
 };
 export const GENERAL = {
     MAX_PRODUCTS: 'MaxProducts',
+    MERCHANT_ID: 'MerchantId',
+    HOST_URL: 'HostUrl',
 };
 export const ORDER = {
     PREFIX_ORDER_NO: 'PrefixOrderNo',
@@ -34,7 +36,7 @@ export const PRODUCT = {
     HIDE_LONG_DESC: 'HideLongDesc',
 };
 export const FIUU = {
-    MERCHANT_ID: 'FiuuMerchantId',
     V_KEY: 'FiuuVKey',
     S_KEY: 'FiuuSKey',
+    USE_EXTENDED_FORMAT: 'FiuuUExtFormat',
 };
