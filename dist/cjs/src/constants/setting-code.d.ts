@@ -38,6 +38,6 @@ export declare const PRODUCT: {
 export declare const FIUU: {
     V_KEY: string;
     S_KEY: string;
-    USE_EXTENDED_FORMAT: string;
+    USE_EXT_FORMAT: string;
 };
 //# sourceMappingURL=setting-code.d.ts.map

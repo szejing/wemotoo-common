@@ -42,5 +42,5 @@ export const PRODUCT = {
 export const FIUU = {
 	V_KEY: 'FiuuVKey',
 	S_KEY: 'FiuuSKey',
-	USE_EXTENDED_FORMAT: 'FiuuUExtFormat',
+	USE_EXT_FORMAT: 'FiuuExtFormat',
 };
