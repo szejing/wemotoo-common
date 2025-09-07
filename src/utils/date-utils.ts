@@ -15,6 +15,11 @@ export const isToday = (date: Date): boolean => {
 	return date instanceof Date && date.toDateString() === now.toDateString();
 };
 
+// start date and end date is between today
+export const isAvailable = (startDate: Date, endDate: Date): boolean => {
+	return !isFuture(startDate) && !isPast(endDate);
+};
+
 export const isSameDate = (date1: Date, date2: Date): boolean => {
 	try {
 		return date1 instanceof Date && date2 instanceof Date && getFormattedDate(date1) === getFormattedDate(date2);
