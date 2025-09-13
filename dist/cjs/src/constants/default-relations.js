@@ -21,8 +21,8 @@ exports.defaultProductRelations = [
 ];
 exports.defaultGetProductVariantRelations = ['price_types', 'options'];
 exports.defaultProductOptionRelations = ['values'];
-exports.defaultOrderRelations = ['items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer'];
-exports.defaultSaleRelations = ['items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer'];
+exports.defaultOrderRelations = ['items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer', 'taxes'];
+exports.defaultSaleRelations = ['items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer', 'taxes'];
 exports.defaultCartRelations = ['items', 'items.appointment', 'customer'];
 exports.defaultPaymentMethodRelations = ['currency', 'payment_provider'];
 exports.defaultPaymentTypeGroupRelations = ['payment_types', 'payment_types.currency'];
