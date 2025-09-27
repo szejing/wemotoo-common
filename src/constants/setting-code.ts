@@ -39,6 +39,10 @@ export const PRODUCT = {
 	HIDE_LONG_DESC: 'HideLongDesc',
 };
 
+export const APPOINTMENT = {
+	AUTO_CONFIRM: 'AutoConfirm',
+};
+
 export const FIUU = {
 	V_KEY: 'FiuuVKey',
 	S_KEY: 'FiuuSKey',
