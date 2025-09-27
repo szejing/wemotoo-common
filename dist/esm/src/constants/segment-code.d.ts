@@ -4,6 +4,8 @@ export declare const SEGMENT_CODE: {
     SALES_ORDER: string;
     CART: string;
     ORDER: string;
+    SALES: string;
+    APPOINTMENT: string;
     REPORT: string;
     PRODUCT: string;
     EXTERNAL: string;
