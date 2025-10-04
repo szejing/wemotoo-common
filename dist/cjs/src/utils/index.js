@@ -17,3 +17,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./list-utils"), exports);
 __exportStar(require("./string-utils"), exports);
 __exportStar(require("./date-utils"), exports);
+__exportStar(require("./functions"), exports);
