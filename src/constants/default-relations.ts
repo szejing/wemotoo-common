@@ -24,11 +24,11 @@ export const defaultGetProductVariantRelations = ['price_types', 'options'];
 
 export const defaultProductOptionRelations = ['values'];
 
-export const defaultOrderRelations = ['items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer', 'taxes'];
+export const defaultOrderRelations = ['currency', 'items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer', 'taxes'];
 
-export const defaultSaleRelations = ['items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer', 'taxes'];
+export const defaultSaleRelations = ['currency', 'items', 'items.appointment', 'items.discounts', 'payments', 'discounts', 'customer', 'taxes'];
 
-export const defaultCartRelations = ['items', 'items.appointment', 'customer'];
+export const defaultCartRelations = ['currency', 'items', 'items.appointment', 'customer'];
 
 export const defaultPaymentMethodRelations = ['currency', 'payment_provider'];
 
