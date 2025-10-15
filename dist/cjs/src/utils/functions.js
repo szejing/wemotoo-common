@@ -29,3 +29,8 @@ function debouncePromise(func, delay) {
         });
     };
 }
+function removeDuplicateExpands(expands) {
+    // Sort for consistent prefix matching
+    expands = [...new Set(expands)].sort();
+    return expands.filter((expand) => !expands.some((other) => other !== expand && expand.startsWith(other + '.')));
+}
