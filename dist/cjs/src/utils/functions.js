@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.debounce = debounce;
 exports.debouncePromise = debouncePromise;
+exports.removeDuplicateExpands = removeDuplicateExpands;
 function debounce(func, delay) {
     let timer;
     return (...args) => {

@@ -30,7 +30,7 @@ export function debouncePromise<T extends (...args: any[]) => Promise<any>>(func
 	};
 }
 
-function removeDuplicateExpands(expands: string[]): string[] {
+export function removeDuplicateExpands(expands: string[]): string[] {
 	// Sort for consistent prefix matching
 	expands = [...new Set(expands)].sort();
 
