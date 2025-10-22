@@ -1,8 +1,7 @@
 export var PaymentStatus;
 (function (PaymentStatus) {
     PaymentStatus["PENDING"] = "pending";
-    PaymentStatus["SUCCESS"] = "success";
-    PaymentStatus["FAILED"] = "failed";
+    PaymentStatus["PAID"] = "paid";
     PaymentStatus["REFUNDED"] = "refunded";
     PaymentStatus["PARTIALLY_REFUNDED"] = "partially_refunded";
     PaymentStatus["PARTIALLY_PAID"] = "partially_paid";

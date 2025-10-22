@@ -8,7 +8,6 @@ export * from './discount-condition-type';
 export * from './discount-rule-type';
 export * from './fulfillment-status';
 export * from './input_type';
-export * from './modules';
 export * from './order-status';
 export * from './sale-status';
 export * from './package';

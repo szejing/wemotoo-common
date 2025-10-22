@@ -23,7 +23,6 @@ __exportStar(require("./discount-condition-type"), exports);
 __exportStar(require("./discount-rule-type"), exports);
 __exportStar(require("./fulfillment-status"), exports);
 __exportStar(require("./input_type"), exports);
-__exportStar(require("./modules"), exports);
 __exportStar(require("./order-status"), exports);
 __exportStar(require("./sale-status"), exports);
 __exportStar(require("./package"), exports);
