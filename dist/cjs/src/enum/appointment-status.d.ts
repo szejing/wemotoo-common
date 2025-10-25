@@ -1,4 +1,5 @@
 export declare enum AppointmentStatus {
+    VOIDED = "voided",
     PENDING = "pending",
     CONFIRMED = "confirmed",
     CANCELLED = "cancelled",

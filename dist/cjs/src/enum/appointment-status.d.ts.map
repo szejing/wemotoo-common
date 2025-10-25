@@ -1,1 +1,1 @@
-{"version":3,"file":"appointment-status.d.ts","sourceRoot":"","sources":["../../../../src/enum/appointment-status.ts"],"names":[],"mappings":"AAAA,oBAAY,iBAAiB;IAC5B,OAAO,YAAY;IACnB,SAAS,cAAc;IACvB,SAAS,cAAc;IACvB,SAAS,cAAc;IACvB,WAAW,gBAAgB;IAC3B,OAAO,YAAY;CACnB"}
+{"version":3,"file":"appointment-status.d.ts","sourceRoot":"","sources":["../../../../src/enum/appointment-status.ts"],"names":[],"mappings":"AAAA,oBAAY,iBAAiB;IAC5B,MAAM,WAAW;IACjB,OAAO,YAAY;IACnB,SAAS,cAAc;IACvB,SAAS,cAAc;IACvB,SAAS,cAAc;IACvB,WAAW,gBAAgB;IAC3B,OAAO,YAAY;CACnB"}

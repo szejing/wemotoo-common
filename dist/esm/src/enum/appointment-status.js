@@ -1,5 +1,6 @@
 export var AppointmentStatus;
 (function (AppointmentStatus) {
+    AppointmentStatus["VOIDED"] = "voided";
     AppointmentStatus["PENDING"] = "pending";
     AppointmentStatus["CONFIRMED"] = "confirmed";
     AppointmentStatus["CANCELLED"] = "cancelled";
