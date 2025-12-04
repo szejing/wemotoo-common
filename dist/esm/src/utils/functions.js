@@ -30,3 +30,10 @@ export function removeDuplicateExpands(expands) {
     expands = [...new Set(expands)].sort();
     return expands.filter((expand) => !expands.some((other) => other !== expand && expand.startsWith(other + '.')));
 }
+export const formatCurrency = (value, currency = 'MYR', fractionDigits = 2) => {
+    if (value === null || value === undefined) {
+        throw new Error('value cannot be null or undefined');
+    }
+    const formatter = Intl.NumberFormat('en-MY', { style: 'currency', currency, maximumFractionDigits: fractionDigits });
+    return formatter.format(value);
+};

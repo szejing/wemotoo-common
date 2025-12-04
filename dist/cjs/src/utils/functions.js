@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.formatCurrency = void 0;
 exports.debounce = debounce;
 exports.debouncePromise = debouncePromise;
 exports.removeDuplicateExpands = removeDuplicateExpands;
@@ -35,3 +36,11 @@ function removeDuplicateExpands(expands) {
     expands = [...new Set(expands)].sort();
     return expands.filter((expand) => !expands.some((other) => other !== expand && expand.startsWith(other + '.')));
 }
+const formatCurrency = (value, currency = 'MYR', fractionDigits = 2) => {
+    if (value === null || value === undefined) {
+        throw new Error('value cannot be null or undefined');
+    }
+    const formatter = Intl.NumberFormat('en-MY', { style: 'currency', currency, maximumFractionDigits: fractionDigits });
+    return formatter.format(value);
+};
+exports.formatCurrency = formatCurrency;
