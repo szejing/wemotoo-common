@@ -36,3 +36,13 @@ export function removeDuplicateExpands(expands: string[]): string[] {
 
 	return expands.filter((expand) => !expands.some((other) => other !== expand && expand.startsWith(other + '.')));
 }
+
+export const formatCurrency = (value: number, currency: string = 'MYR', fractionDigits: number = 2): string => {
+	if (value === null || value === undefined) {
+		throw new Error('value cannot be null or undefined');
+	}
+
+	const formatter = Intl.NumberFormat('en-MY', { style: 'currency', currency, maximumFractionDigits: fractionDigits });
+
+	return formatter.format(value);
+};
