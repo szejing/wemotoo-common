@@ -3,11 +3,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.defaultTaxRulesRelations = exports.defaultTaxGroupRelations = exports.defaultProductBrandRelations = exports.defaultPaymentTypeGroupRelations = exports.defaultPaymentMethodRelations = exports.defaultCartRelations = exports.defaultSaleRelations = exports.defaultOrderRelations = exports.defaultProductOptionRelations = exports.defaultGetProductVariantRelations = exports.defaultProductRelations = exports.defaultSimpleProductRelations = exports.defaultProductCategoryRelations = exports.imageRelations = void 0;
 exports.imageRelations = ['thumbnail', 'images'];
 exports.defaultProductCategoryRelations = [...exports.imageRelations, 'parent_category'];
-exports.defaultSimpleProductRelations = [...exports.imageRelations, 'price_types', 'type'];
+exports.defaultSimpleProductRelations = [...exports.imageRelations, 'price_types', 'price_types.currency', 'type'];
 exports.defaultProductRelations = [
     ...exports.defaultSimpleProductRelations,
     'variants',
     'variants.price_types',
+    'variants.price_types.currency',
     'variants.thumbnail',
     'variants.images',
     'variants.options',

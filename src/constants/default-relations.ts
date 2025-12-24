@@ -2,12 +2,13 @@ export const imageRelations = ['thumbnail', 'images'];
 
 export const defaultProductCategoryRelations = [...imageRelations, 'parent_category'];
 
-export const defaultSimpleProductRelations = [...imageRelations, 'price_types', 'type'];
+export const defaultSimpleProductRelations = [...imageRelations, 'price_types', 'price_types.currency', 'type'];
 
 export const defaultProductRelations = [
 	...defaultSimpleProductRelations,
 	'variants',
 	'variants.price_types',
+	'variants.price_types.currency',
 	'variants.thumbnail',
 	'variants.images',
 	'variants.options',
