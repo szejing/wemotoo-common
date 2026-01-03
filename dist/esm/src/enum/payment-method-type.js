@@ -1,26 +1,23 @@
 var PaymentMethodType;
 (function (PaymentMethodType) {
     PaymentMethodType[PaymentMethodType["ALL"] = 0] = "ALL";
-    PaymentMethodType[PaymentMethodType["CREDIT_CARD"] = 1] = "CREDIT_CARD";
-    PaymentMethodType[PaymentMethodType["DEBIT_CARD"] = 2] = "DEBIT_CARD";
-    PaymentMethodType[PaymentMethodType["QR_CODE"] = 3] = "QR_CODE";
-    PaymentMethodType[PaymentMethodType["E_WALLET"] = 4] = "E_WALLET";
-    PaymentMethodType[PaymentMethodType["BANK_TRANSFER"] = 5] = "BANK_TRANSFER";
-    PaymentMethodType[PaymentMethodType["CASH"] = 6] = "CASH";
+    PaymentMethodType[PaymentMethodType["CARD"] = 1] = "CARD";
+    PaymentMethodType[PaymentMethodType["E_WALLET"] = 2] = "E_WALLET";
+    PaymentMethodType[PaymentMethodType["FPX"] = 3] = "FPX";
+    PaymentMethodType[PaymentMethodType["BANK_TRANSFER"] = 4] = "BANK_TRANSFER";
+    PaymentMethodType[PaymentMethodType["CASH"] = 5] = "CASH";
 })(PaymentMethodType || (PaymentMethodType = {}));
 // parameter int convert to string
 const getPaymentMethodType = (type) => {
     switch (type) {
         case PaymentMethodType.ALL:
-            return 'All';
-        case PaymentMethodType.CREDIT_CARD:
-            return 'Credit Card';
-        case PaymentMethodType.DEBIT_CARD:
-            return 'Debit Card';
-        case PaymentMethodType.QR_CODE:
-            return 'QR Code';
+            return 'Cards, FPX, E-Wallet';
+        case PaymentMethodType.CARD:
+            return 'Credit/Debit Card';
         case PaymentMethodType.E_WALLET:
             return 'E-Wallet';
+        case PaymentMethodType.FPX:
+            return 'FPX';
         case PaymentMethodType.BANK_TRANSFER:
             return 'Bank Transfer';
         case PaymentMethodType.CASH:

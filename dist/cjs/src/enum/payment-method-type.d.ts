@@ -1,12 +1,11 @@
 declare enum PaymentMethodType {
     ALL = 0,
-    CREDIT_CARD = 1,
-    DEBIT_CARD = 2,
-    QR_CODE = 3,
-    E_WALLET = 4,
-    BANK_TRANSFER = 5,
-    CASH = 6
+    CARD = 1,
+    E_WALLET = 2,
+    FPX = 3,
+    BANK_TRANSFER = 4,
+    CASH = 5
 }
-declare const getPaymentMethodType: (type: number) => "All" | "Credit Card" | "Debit Card" | "QR Code" | "E-Wallet" | "Bank Transfer" | "Cash" | "Unknown";
+declare const getPaymentMethodType: (type: number) => "Cards, FPX, E-Wallet" | "Credit/Debit Card" | "E-Wallet" | "FPX" | "Bank Transfer" | "Cash" | "Unknown";
 export { PaymentMethodType, getPaymentMethodType };
 //# sourceMappingURL=payment-method-type.d.ts.map

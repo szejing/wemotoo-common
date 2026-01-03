@@ -1,9 +1,8 @@
 enum PaymentMethodType {
 	ALL,
-	CREDIT_CARD,
-	DEBIT_CARD,
-	QR_CODE,
+	CARD,
 	E_WALLET,
+	FPX,
 	BANK_TRANSFER,
 	CASH,
 }
@@ -12,15 +11,13 @@ enum PaymentMethodType {
 const getPaymentMethodType = (type: number) => {
 	switch (type) {
 		case PaymentMethodType.ALL:
-			return 'All';
-		case PaymentMethodType.CREDIT_CARD:
-			return 'Credit Card';
-		case PaymentMethodType.DEBIT_CARD:
-			return 'Debit Card';
-		case PaymentMethodType.QR_CODE:
-			return 'QR Code';
+			return 'Cards, FPX, E-Wallet';
+		case PaymentMethodType.CARD:
+			return 'Credit/Debit Card';
 		case PaymentMethodType.E_WALLET:
 			return 'E-Wallet';
+		case PaymentMethodType.FPX:
+			return 'FPX';
 		case PaymentMethodType.BANK_TRANSFER:
 			return 'Bank Transfer';
 		case PaymentMethodType.CASH:
