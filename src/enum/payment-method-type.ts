@@ -8,7 +8,7 @@ enum PaymentMethodType {
 }
 
 // parameter int convert to string
-const getPaymentMethodType = (type: number) => {
+const getPaymentMethodType = (type: PaymentMethodType) => {
 	switch (type) {
 		case PaymentMethodType.ALL:
 			return 'Cards, FPX, E-Wallet';

@@ -6,6 +6,6 @@ declare enum PaymentMethodType {
     BANK_TRANSFER = 4,
     CASH = 5
 }
-declare const getPaymentMethodType: (type: number) => "Cards, FPX, E-Wallet" | "Credit/Debit Card" | "E-Wallet" | "FPX" | "Bank Transfer" | "Cash" | "Unknown";
+declare const getPaymentMethodType: (type: PaymentMethodType) => "Cards, FPX, E-Wallet" | "Credit/Debit Card" | "E-Wallet" | "FPX" | "Bank Transfer" | "Cash" | "Unknown";
 export { PaymentMethodType, getPaymentMethodType };
 //# sourceMappingURL=payment-method-type.d.ts.map
