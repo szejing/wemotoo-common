@@ -11,6 +11,8 @@ export declare const MERCHANT: {
     COMPANY_WEBSITE: string;
     CONTACT_PERSON: string;
     CONTACT_NO: string;
+    CONTACT_DIAL_CODE: string;
+    WEBSITE_URL: string;
     JOINED_DATE: string;
     EXPIRED_DATE: string;
     ADDRESS1: string;
