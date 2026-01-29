@@ -29,4 +29,5 @@ exports.API_PATH = {
     TAXES: 'taxes',
     TAX_GROUPS: 'tax-groups',
     TAX_RULES: 'tax-rules',
+    INFO: 'info',
 };
