@@ -1,6 +1,6 @@
 export declare enum Package {
-    FREE = "free",
-    SILVER = "silver",
-    GOLD = "gold"
+    SELLER = "wemotoo_seller",
+    ORGANIZER = "wemotoo_organizer",
+    VIP = "wemotoo_vip"
 }
 //# sourceMappingURL=package.d.ts.map

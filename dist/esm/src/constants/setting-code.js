@@ -12,7 +12,6 @@ export const MERCHANT = {
     CONTACT_PERSON: 'MerchantContactPerson',
     CONTACT_NO: 'MerchantContactNo',
     CONTACT_DIAL_CODE: 'MerchantContactDialCode',
-    WEBSITE_URL: 'MerchantWebsite',
     JOINED_DATE: 'MerchantJoinedDate',
     EXPIRED_DATE: 'MerchantExpiredDate',
     ADDRESS1: 'MerchantAddress1',
