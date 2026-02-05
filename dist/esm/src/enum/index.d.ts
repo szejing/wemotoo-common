@@ -26,3 +26,4 @@ export * from './appointment-status';
 export * from './amount-type';
 export * from './filter-operator';
 export * from './filter-condition';
+export * from './subscription-duration';

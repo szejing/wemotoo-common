@@ -17,6 +17,7 @@ exports.MERCHANT = {
     CONTACT_DIAL_CODE: 'MerchantContactDialCode',
     JOINED_DATE: 'MerchantJoinedDate',
     EXPIRED_DATE: 'MerchantExpiredDate',
+    SUBSCRIPTION_DURATION: 'MerchantSubscriptionDuration',
     ADDRESS1: 'MerchantAddress1',
     ADDRESS2: 'MerchantAddress2',
     ADDRESS3: 'MerchantAddress3',
