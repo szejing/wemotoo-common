@@ -43,4 +43,4 @@ __exportStar(require("./appointment-status"), exports);
 __exportStar(require("./amount-type"), exports);
 __exportStar(require("./filter-operator"), exports);
 __exportStar(require("./filter-condition"), exports);
-__exportStar(require("./subscription-duration"), exports);
+__exportStar(require("./subs-duration"), exports);
