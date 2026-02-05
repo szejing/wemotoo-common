@@ -14,7 +14,7 @@ export declare const MERCHANT: {
     CONTACT_DIAL_CODE: string;
     JOINED_DATE: string;
     EXPIRED_DATE: string;
-    SUBSCRIPTION_DURATION: string;
+    SUBS_DURATION: string;
     ADDRESS1: string;
     ADDRESS2: string;
     ADDRESS3: string;
