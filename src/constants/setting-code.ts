@@ -1,6 +1,7 @@
 export const MERCHANT = {
 	ID: 'MerchantId',
 	NAME: 'MerchantName',
+	LOGO: 'MerchantLogo',
 	THUMBNAIL: 'MerchantThumbnail',
 	BANNER: 'MerchantBanner',
 	PACKAGE: 'MerchantPackage',

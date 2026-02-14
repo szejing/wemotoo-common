@@ -4,6 +4,7 @@ exports.FIUU = exports.APPOINTMENT = exports.PRODUCT = exports.ORDER = exports.G
 exports.MERCHANT = {
     ID: 'MerchantId',
     NAME: 'MerchantName',
+    LOGO: 'MerchantLogo',
     THUMBNAIL: 'MerchantThumbnail',
     BANNER: 'MerchantBanner',
     PACKAGE: 'MerchantPackage',

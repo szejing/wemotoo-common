@@ -1,6 +1,7 @@
 export declare const MERCHANT: {
     ID: string;
     NAME: string;
+    LOGO: string;
     THUMBNAIL: string;
     BANNER: string;
     PACKAGE: string;
