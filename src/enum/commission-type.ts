@@ -1,4 +1,4 @@
-export enum ComissionType {
+export enum CommissionType {
 	NONE,
 	DEFAULT,
 	FIXED,

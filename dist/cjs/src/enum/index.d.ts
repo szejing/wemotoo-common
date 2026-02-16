@@ -27,5 +27,5 @@ export * from './amount-type';
 export * from './filter-operator';
 export * from './filter-condition';
 export * from './subs-duration';
-export * from './comission-type';
+export * from './commission-type';
 //# sourceMappingURL=index.d.ts.map

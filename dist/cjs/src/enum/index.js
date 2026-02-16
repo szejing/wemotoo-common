@@ -44,4 +44,4 @@ __exportStar(require("./amount-type"), exports);
 __exportStar(require("./filter-operator"), exports);
 __exportStar(require("./filter-condition"), exports);
 __exportStar(require("./subs-duration"), exports);
-__exportStar(require("./comission-type"), exports);
+__exportStar(require("./commission-type"), exports);
