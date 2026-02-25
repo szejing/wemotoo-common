@@ -27,4 +27,5 @@ export declare const API_PATH: {
     TAX_GROUPS: string;
     TAX_RULES: string;
     INFO: string;
+    AFFILIATES: string;
 };

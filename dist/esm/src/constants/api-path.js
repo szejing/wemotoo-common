@@ -27,4 +27,5 @@ export const API_PATH = {
     TAX_GROUPS: 'tax-groups',
     TAX_RULES: 'tax-rules',
     INFO: 'info',
+    AFFILIATES: 'affiliates',
 };
