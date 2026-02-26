@@ -1,5 +1,5 @@
 export var ProductType;
 (function (ProductType) {
     ProductType["ITEM"] = "item";
-    ProductType["MAINTENANCE"] = "maintenance";
+    ProductType["SERVICE"] = "service";
 })(ProductType || (ProductType = {}));

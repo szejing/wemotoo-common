@@ -1,5 +1,5 @@
 export declare enum ProductType {
     ITEM = "item",
-    MAINTENANCE = "maintenance"
+    SERVICE = "service"
 }
 //# sourceMappingURL=product-type.d.ts.map
