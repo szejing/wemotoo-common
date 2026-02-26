@@ -1,4 +1,4 @@
-export type MaintenanceMetadata = {
+export type ServiceMetadata = {
 	requires_booking: boolean;
 	duration: string;
 	start_time: string | null;
