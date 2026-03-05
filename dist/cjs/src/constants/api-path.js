@@ -9,6 +9,7 @@ exports.API_PATH = {
     PROD_TAGS: 'product-tags',
     PROD: 'products',
     PROD_OPTIONS: 'product-options',
+    PROD_VARIATIONS: 'product-variations',
     PROD_VARIANTS: 'product-variants',
     PROD_TYPES: 'product-types',
     PROD_BRANDS: 'product-brands',

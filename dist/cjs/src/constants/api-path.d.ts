@@ -6,6 +6,7 @@ export declare const API_PATH: {
     PROD_TAGS: string;
     PROD: string;
     PROD_OPTIONS: string;
+    PROD_VARIATIONS: string;
     PROD_VARIANTS: string;
     PROD_TYPES: string;
     PROD_BRANDS: string;
