@@ -12,13 +12,12 @@ export const defaultProductRelations = [
 	'variants.thumbnail',
 	'variants.images',
 	'variants.options',
-	'options',
-	'options.values',
+	'variations',
+	'variations.options',
 	'categories',
 	'tags',
 	'brands',
 	'collection',
-	'options',
 ];
 
 export const defaultGetProductVariantRelations = ['price_types', 'options'];
