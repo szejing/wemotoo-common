@@ -13,6 +13,7 @@ export const defaultProductRelations = [
 	'variants.images',
 	'variants.options',
 	'variations',
+	'variations.variation',
 	'variations.options',
 	'categories',
 	'tags',
