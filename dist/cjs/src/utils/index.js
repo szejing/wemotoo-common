@@ -19,3 +19,4 @@ __exportStar(require("./string-utils"), exports);
 __exportStar(require("./date-utils"), exports);
 __exportStar(require("./functions"), exports);
 __exportStar(require("./hash-utils"), exports);
+__exportStar(require("./request-signature"), exports);
