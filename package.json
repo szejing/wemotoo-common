@@ -5,7 +5,10 @@
 	"module": "./dist/esm/index.esm.js",
 	"exports": {
 		".": {
-			"import": "./dist/esm/index.esm.js",
+			"import": {
+				"browser": "./dist/esm/index.browser.esm.js",
+				"default": "./dist/esm/index.esm.js"
+			},
 			"require": "./dist/cjs/index.cjs.js"
 		}
 	},
