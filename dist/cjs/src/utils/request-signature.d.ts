@@ -1,4 +1,16 @@
 /**
+ * Canonical path+query for signing/verification so both sides match.
+ * - Path: no trailing slash (except root "/").
+ * - Query: keys sorted alphabetically, consistent encoding (encodeURIComponent).
+ * Use when building the path to sign (portal) and when verifying (backend).
+ */
+export declare function canonicalPathAndQuery(pathWithQuery: string): string;
+/**
+ * Build canonical path+query from pathname and query object (for portal signing).
+ * Path has no trailing slash; query keys are sorted.
+ */
+export declare function canonicalPathAndQueryFromParts(pathname: string, query?: Record<string, any>): string;
+/**
  * Canonical string format for request signing: METHOD\nPATH\nTIMESTAMP\nBODY_HASH
  * PATH must include query string if present. BODY_HASH is SHA256 of raw body in hex, or hash of empty string for GET/HEAD/OPTIONS.
  */
