@@ -23,6 +23,8 @@ export declare const MERCHANT: {
     ADDRESS_COUNTRY: string;
     ADDRESS_STATE: string;
     ADDRESS_POSTAL_CODE: string;
+    OPERATION_START_TIME: string;
+    OPERATION_END_TIME: string;
 };
 export declare const GENERAL: {
     MAX_PRODUCTS: string;

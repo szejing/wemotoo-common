@@ -23,6 +23,9 @@ export const MERCHANT = {
 	ADDRESS_COUNTRY: 'MerchantAddressCountry',
 	ADDRESS_STATE: 'MerchantAddressState',
 	ADDRESS_POSTAL_CODE: 'MerchantAddressPostalCode',
+	OPERATION_OFF_DAYS: 'MerchantOperationOffDays',
+	OPERATION_START_TIME: 'MerchantOperationStartTime',
+	OPERATION_END_TIME: 'MerchantOperationEndTime',
 };
 
 export const GENERAL = {
