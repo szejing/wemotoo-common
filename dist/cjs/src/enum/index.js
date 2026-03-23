@@ -24,7 +24,7 @@ __exportStar(require("./discount-rule-type"), exports);
 __exportStar(require("./fulfillment-status"), exports);
 __exportStar(require("./input_type"), exports);
 __exportStar(require("./order-status"), exports);
-__exportStar(require("./sale-status"), exports);
+// export * from './sale-status';
 __exportStar(require("./package"), exports);
 __exportStar(require("./payment-status"), exports);
 __exportStar(require("./price-list-status"), exports);

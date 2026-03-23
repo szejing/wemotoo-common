@@ -1,5 +1,5 @@
-export enum SaleStatus {
-	COMPLETED = 'completed',
-	CANCELLED = 'cancelled',
-	REFUNDED = 'refunded',
-}
+// export enum SaleStatus {
+// 	COMPLETED = 'completed',
+// 	CANCELLED = 'cancelled',
+// 	REFUNDED = 'refunded',
+// }

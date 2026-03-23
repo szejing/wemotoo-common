@@ -8,7 +8,7 @@ export * from './discount-rule-type';
 export * from './fulfillment-status';
 export * from './input_type';
 export * from './order-status';
-export * from './sale-status';
+// export * from './sale-status';
 export * from './package';
 export * from './payment-status';
 export * from './price-list-status';
