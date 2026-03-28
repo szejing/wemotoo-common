@@ -1,0 +1,191 @@
+---
+alwaysApply: true
+---
+
+# General Coding Rules for wemotoo-common (Shared Library)
+
+## Project Background
+
+This is a **shared TypeScript library** consumed by three projects:
+
+1. **ecommerce-nestjs** (NestJS backend) – imports via `require` (CJS) and `import` (ESM)
+2. **wemotoo-crm-portal** (Nuxt admin portal) – imports via ESM (browser + server)
+3. **wemotoo-webapp** (Nuxt user-facing app) – imports via ESM (browser + server)
+
+Any code added here must be **isomorphic** and work in both Node.js and browser environments unless explicitly placed in a Node-only or browser-only entry point.
+
+## Project Structure
+
+```
+wemotoo-common/
+├── index.esm.ts              # ESM entry (server-side: Node)
+├── index.browser.esm.ts      # ESM entry (browser: no Node APIs e.g. crypto)
+├── index.cjs.ts              # CJS entry (NestJS backend)
+├── src/
+│   ├── constants/             # Shared constants (API paths, keys, setting codes, etc.)
+│   ├── enum/                  # Shared enums (order status, product type, user roles, etc.)
+│   ├── metadata/              # Entity metadata (default relations, type metadata)
+│   └── utils/                 # Shared utility functions
+├── dist/                      # Compiled output (ESM and CJS)
+├── tsconfig.esm.json          # ESM build config
+└── tsconfig.cjs.json          # CJS build config
+```
+
+## Module System
+
+### Dual Build
+The library is compiled into two formats:
+- **ESM** (`dist/esm/`) – used by Nuxt frontends
+- **CJS** (`dist/cjs/`) – used by NestJS backend
+
+### Entry Points
+```json
+{
+  "main": "./dist/cjs/index.cjs.js",
+  "module": "./dist/esm/index.esm.js",
+  "exports": {
+    ".": {
+      "import": {
+        "browser": "./dist/esm/index.browser.esm.js",
+        "default": "./dist/esm/index.esm.js"
+      },
+      "require": "./dist/cjs/index.cjs.js"
+    }
+  }
+}
+```
+
+### Browser vs Server Entry
+- `index.browser.esm.ts` – **must NOT** import Node-only APIs (e.g. `node:crypto`). Used by client-side Nuxt builds.
+- `index.esm.ts` – can import Node APIs. Used server-side by Nuxt (Nitro).
+- `index.cjs.ts` – can import Node APIs. Used by NestJS.
+
+⚠️ **Critical**: When adding new utilities, you MUST decide whether they need to be in the browser entry. If a utility uses Node-only APIs (e.g. `crypto`, `fs`, `path`), do NOT export it from `index.browser.esm.ts`.
+
+## Naming Conventions
+
+### Files
+- Use kebab-case for filenames (e.g. `order-status.ts`, `date-utils.ts`)
+- Each enum gets its own file (e.g. `product-status.ts`, `payment-status.ts`)
+- Constants group by domain (e.g. `api-path.ts`, `setting-code.ts`)
+- Utility files group by category (e.g. `date-utils.ts`, `string-utils.ts`, `list-utils.ts`)
+
+### Enums
+```typescript
+// ✅ Good – PascalCase enum name, PascalCase or UPPER_CASE members
+export enum ProductStatus {
+  Draft = 'draft',
+  Published = 'published',
+  Archived = 'archived',
+}
+
+// ❌ Bad – inconsistent casing
+export enum product_status { ... }
+```
+
+### Constants
+```typescript
+// ✅ Good – UPPER_SNAKE_CASE or PascalCase object
+export const API_PATH = {
+  PRODUCTS: '/api/products',
+  ORDERS: '/api/orders',
+};
+
+export const KEY = {
+  ACCESS_TOKEN: 'access_token',
+  X_MERCHANT_ID: 'x-merchant-id',
+};
+```
+
+## Adding New Code
+
+### Step 1: Create the file
+Place it in the appropriate `src/` subdirectory:
+- Enum → `src/enum/`
+- Constant → `src/constants/`
+- Utility function → `src/utils/`
+- Entity metadata (default relations, types) → `src/metadata/`
+
+### Step 2: Re-export from the category index
+Each subdirectory has an `index.ts` barrel file. Add your export there:
+```typescript
+// src/enum/index.ts
+export * from './product-status';
+export * from './your-new-enum';  // ← add this
+```
+
+### Step 3: Ensure entry points export it
+The top-level entry points re-export from category indices:
+```typescript
+// index.esm.ts
+export * from './src/constants';
+export * from './src/enum';
+export * from './src/utils';
+export * from './src/metadata';
+```
+
+If your code is browser-safe, also verify it's included in `index.browser.esm.ts`.
+
+### Step 4: Rebuild
+```bash
+npm run build   # or: npm run build:esm && npm run build:cjs
+```
+
+All consumers install via git, so after pushing changes, consumers need to run `bun install` or `npm install` to pull the latest.
+
+## TypeScript Standards
+
+### Strict Types
+- Always use explicit types for function parameters and return types.
+- Never use `any` unless absolutely necessary.
+- Prefer union types over loose string/number types.
+
+### No Side Effects
+- This is a library. Do NOT include code with side effects at import time.
+- No `console.log` in production code.
+- All exports should be pure functions, constants, enums, or types.
+
+## Dependencies
+
+### Minimal Dependencies
+This library should have as few dependencies as possible. Current dependencies:
+- `date-fns` – date utilities
+- `@types/node` – Node type definitions
+
+### No Framework Dependencies
+- Do NOT add NestJS, Nuxt, Vue, or any framework-specific dependency.
+- Keep the library framework-agnostic.
+
+## What Belongs Here vs. in Individual Projects
+
+### ✅ PUT in wemotoo-common
+- Enums used by 2+ projects (e.g. `OrderStatus`, `ProductType`, `UserRoles`)
+- Constants used by 2+ projects (e.g. API paths, key names, setting codes)
+- Pure utility functions used by 2+ projects (e.g. date formatting, string helpers)
+- Default entity relations metadata (used by backend and frontends)
+- Request signing utilities (used by both Nuxt apps' server routes)
+
+### ❌ KEEP in individual projects
+- Framework-specific code (NestJS decorators, Vue composables, Nuxt middleware)
+- UI components
+- Business logic specific to one project
+- Types/interfaces specific to one project's API layer
+
+## Build & Publish Workflow
+
+```bash
+# Development
+npm run build          # Build both ESM and CJS
+
+# Clean rebuild
+npm run rebuild        # rm -rf dist node_modules && build
+
+# After changes, push to git. Consumers update via:
+bun install            # or npm install (re-fetches from git)
+```
+
+## Testing
+
+- When adding new utility functions, include basic input/output validation.
+- Ensure functions handle edge cases (null, undefined, empty strings, empty arrays).
+- Test that exports work in both CJS and ESM by verifying the build output.
