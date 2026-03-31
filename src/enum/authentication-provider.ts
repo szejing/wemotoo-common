@@ -1,6 +1,7 @@
 export enum AuthenticationProvider {
-  FACEBOOK,
-  GOOGLE,
-  APPLE,
-  EMAIL,
+	FACEBOOK,
+	GOOGLE,
+	APPLE,
+	EMAIL,
+	GUEST,
 }
