@@ -29,5 +29,6 @@ export declare const API_PATH: {
     TAX_RULES: string;
     INFO: string;
     AFFILIATES: string;
+    DISCOUNTS: string;
 };
 //# sourceMappingURL=api-path.d.ts.map

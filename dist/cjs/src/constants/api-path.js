@@ -32,4 +32,5 @@ exports.API_PATH = {
     TAX_RULES: 'tax-rules',
     INFO: 'info',
     AFFILIATES: 'affiliates',
+    DISCOUNTS: 'discounts',
 };
