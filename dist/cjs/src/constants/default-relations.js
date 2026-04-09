@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.defaultVoucherRelations = exports.defaultDiscountRelations = exports.defaultTaxRulesRelations = exports.defaultTaxGroupRelations = exports.defaultProductBrandRelations = exports.defaultPaymentTypeGroupRelations = exports.defaultPaymentMethodRelations = exports.defaultCartRelations = exports.defaultSaleRelations = exports.defaultOrderRelations = exports.defaultProductVariationRelations = exports.defaultGetProductVariantRelations = exports.defaultProductRelations = exports.defaultSimpleProductRelations = exports.defaultProductCategoryRelations = exports.imageRelations = void 0;
+exports.defaultVoucherRedemptionRelations = exports.defaultVoucherRelations = exports.defaultDiscountRelations = exports.defaultTaxRulesRelations = exports.defaultTaxGroupRelations = exports.defaultProductBrandRelations = exports.defaultPaymentTypeGroupRelations = exports.defaultPaymentMethodRelations = exports.defaultCartRelations = exports.defaultSaleRelations = exports.defaultOrderRelations = exports.defaultProductVariationRelations = exports.defaultGetProductVariantRelations = exports.defaultProductRelations = exports.defaultSimpleProductRelations = exports.defaultProductCategoryRelations = exports.imageRelations = void 0;
 exports.imageRelations = ['thumbnail', 'images'];
 exports.defaultProductCategoryRelations = [...exports.imageRelations, 'parent_category'];
 exports.defaultSimpleProductRelations = [...exports.imageRelations, 'price_types', 'price_types.currency', 'type'];
@@ -32,3 +32,4 @@ exports.defaultTaxGroupRelations = ['taxes'];
 exports.defaultTaxRulesRelations = ['details', 'details.tax', 'details.tax_condition', 'details.tax_condition.filters'];
 exports.defaultDiscountRelations = ['conditions'];
 exports.defaultVoucherRelations = ['discount', 'customer', 'redemptions'];
+exports.defaultVoucherRedemptionRelations = ['voucher', 'customer'];

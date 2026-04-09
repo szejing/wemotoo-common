@@ -44,3 +44,5 @@ export const defaultTaxRulesRelations = ['details', 'details.tax', 'details.tax_
 export const defaultDiscountRelations = ['conditions'];
 
 export const defaultVoucherRelations = ['discount', 'customer', 'redemptions'];
+
+export const defaultVoucherRedemptionRelations = ['voucher', 'customer'];
