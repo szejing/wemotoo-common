@@ -27,3 +27,5 @@ export const defaultPaymentTypeGroupRelations = ['payment_types', 'payment_types
 export const defaultProductBrandRelations = ['products'];
 export const defaultTaxGroupRelations = ['taxes'];
 export const defaultTaxRulesRelations = ['details', 'details.tax', 'details.tax_condition', 'details.tax_condition.filters'];
+export const defaultDiscountRelations = ['conditions'];
+export const defaultVoucherRelations = ['discount', 'customer', 'redemptions'];

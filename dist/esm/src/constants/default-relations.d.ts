@@ -12,3 +12,5 @@ export declare const defaultPaymentTypeGroupRelations: string[];
 export declare const defaultProductBrandRelations: string[];
 export declare const defaultTaxGroupRelations: string[];
 export declare const defaultTaxRulesRelations: string[];
+export declare const defaultDiscountRelations: string[];
+export declare const defaultVoucherRelations: string[];
