@@ -20,7 +20,7 @@ __exportStar(require("./authentication-provider"), exports);
 __exportStar(require("./cart-type"), exports);
 __exportStar(require("./discount-condition-operator"), exports);
 __exportStar(require("./discount-condition-type"), exports);
-__exportStar(require("./discount-rule-type"), exports);
+__exportStar(require("./discount-type"), exports);
 __exportStar(require("./fulfillment-status"), exports);
 __exportStar(require("./input_type"), exports);
 __exportStar(require("./order-status"), exports);

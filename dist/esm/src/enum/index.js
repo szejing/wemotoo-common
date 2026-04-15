@@ -4,7 +4,7 @@ export * from './authentication-provider';
 export * from './cart-type';
 export * from './discount-condition-operator';
 export * from './discount-condition-type';
-export * from './discount-rule-type';
+export * from './discount-type';
 export * from './fulfillment-status';
 export * from './input_type';
 export * from './order-status';
