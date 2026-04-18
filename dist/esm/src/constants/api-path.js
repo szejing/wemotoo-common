@@ -31,5 +31,5 @@ export const API_PATH = {
     AFFILIATES: 'affiliates',
     DISCOUNTS: 'discounts',
     SHIPPING_METHODS: 'shipping-methods',
-    SHIPPMENT: 'shipment',
+    SHIPMENT: 'shipment',
 };

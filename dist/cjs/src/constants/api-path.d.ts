@@ -31,6 +31,6 @@ export declare const API_PATH: {
     AFFILIATES: string;
     DISCOUNTS: string;
     SHIPPING_METHODS: string;
-    SHIPPMENT: string;
+    SHIPMENT: string;
 };
 //# sourceMappingURL=api-path.d.ts.map
