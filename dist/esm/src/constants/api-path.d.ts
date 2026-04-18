@@ -30,4 +30,6 @@ export declare const API_PATH: {
     INFO: string;
     AFFILIATES: string;
     DISCOUNTS: string;
+    SHIPPING_METHODS: string;
+    SHIPPMENT: string;
 };
