@@ -32,5 +32,6 @@ export declare const API_PATH: {
     DISCOUNTS: string;
     SHIPPING_METHODS: string;
     SHIPMENT: string;
+    VOUCHERS: string;
 };
 //# sourceMappingURL=api-path.d.ts.map

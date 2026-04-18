@@ -32,4 +32,5 @@ export const API_PATH = {
     DISCOUNTS: 'discounts',
     SHIPPING_METHODS: 'shipping-methods',
     SHIPMENT: 'shipment',
+    VOUCHERS: 'vouchers',
 };
