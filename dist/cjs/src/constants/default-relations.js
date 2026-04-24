@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.defaultVoucherRedemptionRelations = exports.defaultVoucherRelations = exports.defaultDiscountRelations = exports.defaultTaxRulesRelations = exports.defaultTaxGroupRelations = exports.defaultProductBrandRelations = exports.defaultPaymentTypeGroupRelations = exports.defaultPaymentMethodRelations = exports.defaultCartRelations = exports.defaultSaleRelations = exports.defaultOrderRelations = exports.defaultProductVariationRelations = exports.defaultGetProductVariantRelations = exports.defaultProductRelations = exports.defaultSimpleProductRelations = exports.defaultProductCategoryRelations = exports.imageRelations = void 0;
+exports.defaultShippingZoneRelations = exports.defaultShippingMethodRelations = exports.defaultVoucherRedemptionRelations = exports.defaultVoucherRelations = exports.defaultDiscountRelations = exports.defaultTaxRulesRelations = exports.defaultTaxGroupRelations = exports.defaultProductBrandRelations = exports.defaultPaymentTypeGroupRelations = exports.defaultPaymentMethodRelations = exports.defaultCartRelations = exports.defaultSaleRelations = exports.defaultOrderRelations = exports.defaultProductVariationRelations = exports.defaultGetProductVariantRelations = exports.defaultProductRelations = exports.defaultSimpleProductRelations = exports.defaultProductCategoryRelations = exports.imageRelations = void 0;
 exports.imageRelations = ['thumbnail', 'images'];
 exports.defaultProductCategoryRelations = [...exports.imageRelations, 'parent_category'];
 exports.defaultSimpleProductRelations = [...exports.imageRelations, 'price_types', 'price_types.currency', 'type'];
@@ -33,3 +33,5 @@ exports.defaultTaxRulesRelations = ['details', 'details.tax', 'details.tax_condi
 exports.defaultDiscountRelations = ['conditions'];
 exports.defaultVoucherRelations = ['discount', 'customer', 'redemptions'];
 exports.defaultVoucherRedemptionRelations = ['voucher', 'customer'];
+exports.defaultShippingMethodRelations = ['method_zones', 'method_zones.shipping_zone'];
+exports.defaultShippingZoneRelations = ['method_links', 'method_links.shipping_method', 'method_links.shipping_zone'];

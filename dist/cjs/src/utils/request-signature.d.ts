@@ -7,7 +7,9 @@
 export declare function canonicalPathAndQuery(pathWithQuery: string): string;
 /**
  * Build canonical path+query from pathname and query object (for portal signing).
- * Path has no trailing slash; query keys are sorted.
+ * Path has no trailing slash; query keys are sorted (same rules as canonicalPathAndQuery).
+ * Repeated keys (e.g. defaultRelations=a&defaultRelations=b) come through as array values from
+ * getQuery — emit one pair per element so this matches the server’s URLSearchParams expansion.
  */
 export declare function canonicalPathAndQueryFromParts(pathname: string, query?: Record<string, any>): string;
 /**

@@ -25,7 +25,9 @@ export function canonicalPathAndQuery(pathWithQuery: string): string {
 
 /**
  * Build canonical path+query from pathname and query object (for portal signing).
- * Path has no trailing slash; query keys are sorted.
+ * Path has no trailing slash; query keys are sorted (same rules as canonicalPathAndQuery).
+ * Repeated keys (e.g. defaultRelations=a&defaultRelations=b) come through as array values from
+ * getQuery — emit one pair per element so this matches the server’s URLSearchParams expansion.
  */
 export function canonicalPathAndQueryFromParts(
 	pathname: string,
@@ -33,13 +35,23 @@ export function canonicalPathAndQueryFromParts(
 ): string {
 	const pathNormalized = (pathname || '/').replace(/\/+$/, '') || '/';
 	if (!query || Object.keys(query).length === 0) return pathNormalized;
-	const keys = Object.keys(query).sort((a, b) => a.localeCompare(b));
-	const pairs = keys.map((k) => {
+
+	const entries: [string, string][] = [];
+	for (const k of Object.keys(query).sort((a, b) => a.localeCompare(b))) {
 		const v = query[k];
-		const str = Array.isArray(v) ? v.join(',') : v == null ? '' : String(v);
-		return `${encodeURIComponent(k)}=${encodeURIComponent(str)}`;
-	});
-	return `${pathNormalized}?${pairs.join('&')}`;
+		if (Array.isArray(v)) {
+			for (const item of v) {
+				entries.push([k, item == null ? '' : String(item)]);
+			}
+		} else {
+			entries.push([k, v == null ? '' : String(v)]);
+		}
+	}
+	entries.sort((a, b) => a[0].localeCompare(b[0]));
+	const queryString = entries
+		.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(v)}`)
+		.join('&');
+	return `${pathNormalized}?${queryString}`;
 }
 
 /**

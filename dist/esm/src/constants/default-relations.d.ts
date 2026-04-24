@@ -15,3 +15,5 @@ export declare const defaultTaxRulesRelations: string[];
 export declare const defaultDiscountRelations: string[];
 export declare const defaultVoucherRelations: string[];
 export declare const defaultVoucherRedemptionRelations: string[];
+export declare const defaultShippingMethodRelations: string[];
+export declare const defaultShippingZoneRelations: string[];
