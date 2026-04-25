@@ -47,6 +47,6 @@ export const defaultVoucherRelations = ['discount', 'customer', 'redemptions'];
 
 export const defaultVoucherRedemptionRelations = ['voucher', 'customer'];
 
-export const defaultShippingMethodRelations = ['method_zones', 'method_zones.shipping_zone'];
+export const defaultShippingMethodRelations = ['zones', 'zones.shipping_zone'];
 
-export const defaultShippingZoneRelations = ['method_links', 'method_links.shipping_method', 'method_links.shipping_zone'];
+export const defaultShippingZoneRelations = ['methods', 'methods.shipping_method'];

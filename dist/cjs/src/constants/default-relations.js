@@ -33,5 +33,5 @@ exports.defaultTaxRulesRelations = ['details', 'details.tax', 'details.tax_condi
 exports.defaultDiscountRelations = ['conditions'];
 exports.defaultVoucherRelations = ['discount', 'customer', 'redemptions'];
 exports.defaultVoucherRedemptionRelations = ['voucher', 'customer'];
-exports.defaultShippingMethodRelations = ['method_zones', 'method_zones.shipping_zone'];
-exports.defaultShippingZoneRelations = ['method_links', 'method_links.shipping_method', 'method_links.shipping_zone'];
+exports.defaultShippingMethodRelations = ['zones', 'zones.shipping_zone'];
+exports.defaultShippingZoneRelations = ['methods', 'methods.shipping_method'];
