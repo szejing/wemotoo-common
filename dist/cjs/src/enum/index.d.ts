@@ -8,6 +8,7 @@ export * from './fulfillment-status';
 export * from './fulfillment-lifecycle-status';
 export * from './input_type';
 export * from './order-status';
+export * from './order-type';
 export * from './shipment-status';
 export * from './package';
 export * from './payment-status';

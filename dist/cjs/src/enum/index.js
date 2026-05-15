@@ -25,6 +25,7 @@ __exportStar(require("./fulfillment-status"), exports);
 __exportStar(require("./fulfillment-lifecycle-status"), exports);
 __exportStar(require("./input_type"), exports);
 __exportStar(require("./order-status"), exports);
+__exportStar(require("./order-type"), exports);
 __exportStar(require("./shipment-status"), exports);
 // export * from './sale-status';
 __exportStar(require("./package"), exports);
