@@ -6,7 +6,7 @@ alwaysApply: true
 
 ## Project Background
 
-This is a **shared TypeScript library** consumed by three projects:
+This is a **shared TypeScript library** consumed by three application projects:
 
 1. **ecommerce-nestjs** (NestJS backend) – imports via `require` (CJS) and `import` (ESM)
 2. **wemotoo-crm-portal** (Nuxt admin portal) – imports via ESM (browser + server)
