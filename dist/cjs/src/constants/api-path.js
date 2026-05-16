@@ -33,6 +33,7 @@ exports.API_PATH = {
     INFO: 'info',
     AFFILIATES: 'affiliates',
     DISCOUNTS: 'discounts',
+    COURIERS: 'couriers',
     SHIPPING_METHODS: 'shipping-methods',
     SHIPPING_ZONES: 'shipping-zones',
     SHIPMENT: 'shipment',
