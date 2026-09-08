@@ -1,3 +1,4 @@
+import { BadgeColor } from './../constants/component-color';
 /**
  * Merchant/customer workflow timeline for orders.
  * Payment truth lives in {@link PaymentStatus}; warehouse steps in
@@ -16,6 +17,5 @@ export declare enum OrderStatus {
     REFUNDED = "refunded",
     REQUIRES_ACTION = "requires_action"
 }
-export type UiBadgeColor = 'primary' | 'error' | 'success' | 'warning' | 'secondary' | 'info' | 'neutral';
-export declare const ORDER_STATUS_COLORS: Record<OrderStatus, UiBadgeColor>;
-export declare function getOrderStatusColor(status: OrderStatus | string): UiBadgeColor | undefined;
+export declare const ORDER_STATUS_COLORS: Record<OrderStatus, BadgeColor>;
+export declare function getOrderStatusColor(status: OrderStatus | string): BadgeColor | undefined;

@@ -1,4 +1,4 @@
-import type { UiBadgeColor } from './order-status';
+import { BadgeColor } from './../constants/component-color';
 
 export enum ShipmentStatus {
 	PENDING = 'pending',
@@ -8,7 +8,7 @@ export enum ShipmentStatus {
 	FAILED = 'failed',
 }
 
-export const SHIPMENT_STATUS_COLORS: Record<ShipmentStatus, UiBadgeColor> = {
+export const SHIPMENT_STATUS_COLORS: Record<ShipmentStatus, BadgeColor> = {
 	[ShipmentStatus.PENDING]: 'warning',
 	[ShipmentStatus.SHIPPED]: 'primary',
 	[ShipmentStatus.IN_TRANSIT]: 'info',
@@ -16,6 +16,6 @@ export const SHIPMENT_STATUS_COLORS: Record<ShipmentStatus, UiBadgeColor> = {
 	[ShipmentStatus.FAILED]: 'error',
 };
 
-export function getShipmentStatusColor(status: ShipmentStatus | string): UiBadgeColor | undefined {
+export function getShipmentStatusColor(status: ShipmentStatus | string): BadgeColor | undefined {
 	return SHIPMENT_STATUS_COLORS[status as ShipmentStatus];
 }

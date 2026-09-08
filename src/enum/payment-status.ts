@@ -1,4 +1,4 @@
-import type { UiBadgeColor } from './order-status';
+import { BadgeColor } from './../constants/component-color';
 
 export enum PaymentStatus {
 	PENDING = 'pending',
@@ -9,7 +9,7 @@ export enum PaymentStatus {
 	PARTIALLY_PAID = 'partially_paid',
 }
 
-export const PAYMENT_STATUS_COLORS: Record<PaymentStatus, UiBadgeColor> = {
+export const PAYMENT_STATUS_COLORS: Record<PaymentStatus, BadgeColor> = {
 	[PaymentStatus.PENDING]: 'info',
 	[PaymentStatus.PAID]: 'success',
 	[PaymentStatus.REFUNDED]: 'error',
@@ -18,6 +18,6 @@ export const PAYMENT_STATUS_COLORS: Record<PaymentStatus, UiBadgeColor> = {
 	[PaymentStatus.PARTIALLY_PAID]: 'warning',
 };
 
-export function getPaymentStatusColor(status: PaymentStatus | string): UiBadgeColor | undefined {
+export function getPaymentStatusColor(status: PaymentStatus | string): BadgeColor | undefined {
 	return PAYMENT_STATUS_COLORS[status as PaymentStatus];
 }

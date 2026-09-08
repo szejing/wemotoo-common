@@ -1,4 +1,4 @@
-import type { UiBadgeColor } from './order-status';
+import { BadgeColor } from './../constants/component-color';
 
 /**
  * Warehouse-style fulfillment steps for CRM Phase 1.
@@ -11,15 +11,13 @@ export enum FulfillmentLifecycleStatus {
 	FULFILLED = 'fulfilled',
 }
 
-export const FULFILLMENT_LIFECYCLE_STATUS_COLORS: Record<FulfillmentLifecycleStatus, UiBadgeColor> = {
+export const FULFILLMENT_LIFECYCLE_STATUS_COLORS: Record<FulfillmentLifecycleStatus, BadgeColor> = {
 	[FulfillmentLifecycleStatus.PENDING]: 'warning',
 	[FulfillmentLifecycleStatus.PROCESSING]: 'info',
 	[FulfillmentLifecycleStatus.PACKED]: 'primary',
 	[FulfillmentLifecycleStatus.FULFILLED]: 'success',
 };
 
-export function getFulfillmentLifecycleStatusColor(
-	status: FulfillmentLifecycleStatus | string,
-): UiBadgeColor | undefined {
+export function getFulfillmentLifecycleStatusColor(status: FulfillmentLifecycleStatus | string): BadgeColor | undefined {
 	return FULFILLMENT_LIFECYCLE_STATUS_COLORS[status as FulfillmentLifecycleStatus];
 }

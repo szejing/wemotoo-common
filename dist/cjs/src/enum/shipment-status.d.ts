@@ -1,4 +1,4 @@
-import type { UiBadgeColor } from './order-status';
+import { BadgeColor } from './../constants/component-color';
 export declare enum ShipmentStatus {
     PENDING = "pending",
     SHIPPED = "shipped",
@@ -6,6 +6,6 @@ export declare enum ShipmentStatus {
     DELIVERED = "delivered",
     FAILED = "failed"
 }
-export declare const SHIPMENT_STATUS_COLORS: Record<ShipmentStatus, UiBadgeColor>;
-export declare function getShipmentStatusColor(status: ShipmentStatus | string): UiBadgeColor | undefined;
+export declare const SHIPMENT_STATUS_COLORS: Record<ShipmentStatus, BadgeColor>;
+export declare function getShipmentStatusColor(status: ShipmentStatus | string): BadgeColor | undefined;
 //# sourceMappingURL=shipment-status.d.ts.map

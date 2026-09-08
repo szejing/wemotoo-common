@@ -1,3 +1,5 @@
+import { BadgeColor } from './../constants/component-color';
+
 /**
  * Merchant/customer workflow timeline for orders.
  * Payment truth lives in {@link PaymentStatus}; warehouse steps in
@@ -17,9 +19,7 @@ export enum OrderStatus {
 	REQUIRES_ACTION = 'requires_action',
 }
 
-export type UiBadgeColor = 'primary' | 'error' | 'success' | 'warning' | 'secondary' | 'info' | 'neutral';
-
-export const ORDER_STATUS_COLORS: Record<OrderStatus, UiBadgeColor> = {
+export const ORDER_STATUS_COLORS: Record<OrderStatus, BadgeColor> = {
 	[OrderStatus.PENDING_PAYMENT]: 'info',
 	[OrderStatus.CONFIRMED]: 'info',
 	[OrderStatus.PAID]: 'info',
@@ -33,6 +33,6 @@ export const ORDER_STATUS_COLORS: Record<OrderStatus, UiBadgeColor> = {
 	[OrderStatus.REQUIRES_ACTION]: 'warning',
 };
 
-export function getOrderStatusColor(status: OrderStatus | string): UiBadgeColor | undefined {
+export function getOrderStatusColor(status: OrderStatus | string): BadgeColor | undefined {
 	return ORDER_STATUS_COLORS[status as OrderStatus];
 }

@@ -1,4 +1,4 @@
-import type { UiBadgeColor } from './order-status';
+import { BadgeColor } from './../constants/component-color';
 
 export enum FulfillmentStatus {
 	NOT_FULFILLED = 'not_fulfilled',
@@ -12,7 +12,7 @@ export enum FulfillmentStatus {
 	REQUIRES_ACTION = 'requires_action',
 }
 
-export const FULFILLMENT_STATUS_COLORS: Record<FulfillmentStatus, UiBadgeColor> = {
+export const FULFILLMENT_STATUS_COLORS: Record<FulfillmentStatus, BadgeColor> = {
 	[FulfillmentStatus.NOT_FULFILLED]: 'warning',
 	[FulfillmentStatus.PARTIALLY_FULFILLED]: 'info',
 	[FulfillmentStatus.FULFILLED]: 'success',
@@ -24,6 +24,6 @@ export const FULFILLMENT_STATUS_COLORS: Record<FulfillmentStatus, UiBadgeColor> 
 	[FulfillmentStatus.REQUIRES_ACTION]: 'warning',
 };
 
-export function getFulfillmentStatusColor(status: FulfillmentStatus | string): UiBadgeColor | undefined {
+export function getFulfillmentStatusColor(status: FulfillmentStatus | string): BadgeColor | undefined {
 	return FULFILLMENT_STATUS_COLORS[status as FulfillmentStatus];
 }
